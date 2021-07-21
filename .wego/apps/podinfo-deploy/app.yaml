@@ -1,0 +1,12 @@
+---
+apiVersion: wego.weave.works/v1alpha1
+kind: Application
+metadata:
+  labels:
+    weave-gitops.weave.works/app-identifier: wego-f428731dd1bb46e27c5aa9d1c53bebd9
+  name: podinfo-deploy
+  namespace: wego-system
+spec:
+  deployment_type: kustomize
+  path: ./
+  url: ssh://git@github.com/SvenDowideit/podinfo-deploy.git
